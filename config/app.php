@@ -188,6 +188,7 @@ return [
         Awesome\Rest\RestProvider::class,
         Awesome\Connector\ConnectorServiceProvider::class,
         AwesomeManager\TeamService\Client\ClientServiceProvider::class,
+        AwesomeManager\ProjectService\Client\ClientServiceProvider::class,
 
         /*
          * Application Service Providers...

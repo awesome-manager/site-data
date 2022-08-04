@@ -28,5 +28,12 @@ Route::prefix('ajax')->group(function () {
                 'as' => 'ajax.page.vacations.data'
             ]);
         });
+
+        Route::group(['prefix' => 'projects', 'namespace' => 'Projects'], function () {
+            Route::get('/', [
+                'uses' => 'ProjectController@data',
+                'as' => 'ajax.page.projects.data'
+            ]);
+        });
     });
 });
