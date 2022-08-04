@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "awesome-manager-packages/team-service-package",
-            "version": "v1.0.0",
+            "version": "v1.0.2",
             "source": {
                 "type": "git",
                 "url": "git@github.com:awesome-manager-packages/team-service-package.git",
-                "reference": "bc4effe14bb7c46588147c6455f300d53e2bee21"
+                "reference": "d8198982feb7854e82161c6b87df0b986ad2e49e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/awesome-manager-packages/team-service-package/zipball/bc4effe14bb7c46588147c6455f300d53e2bee21",
-                "reference": "bc4effe14bb7c46588147c6455f300d53e2bee21",
+                "url": "https://api.github.com/repos/awesome-manager-packages/team-service-package/zipball/d8198982feb7854e82161c6b87df0b986ad2e49e",
+                "reference": "d8198982feb7854e82161c6b87df0b986ad2e49e",
                 "shasum": ""
             },
             "require": {
@@ -42,10 +42,10 @@
             ],
             "description": "Manager team service package",
             "support": {
-                "source": "https://github.com/awesome-manager-packages/team-service-package/tree/v1.0.0",
+                "source": "https://github.com/awesome-manager-packages/team-service-package/tree/v1.0.2",
                 "issues": "https://github.com/awesome-manager-packages/team-service-package/issues"
             },
-            "time": "2022-07-25T18:56:33+00:00"
+            "time": "2022-07-31T16:06:06+00:00"
         },
         {
             "name": "brick/math",
@@ -1781,19 +1781,20 @@
         },
         {
             "name": "my-awesome-packages/foundation",
-            "version": "v1.0",
+            "version": "v1.0.2",
             "source": {
                 "type": "git",
                 "url": "git@github.com:my-awesome-packages/foundation.git",
-                "reference": "a050cebee1032a492af619a85641534bc73eacc3"
+                "reference": "49a520a71e58622a0a7d85a4ef401872ce654891"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/my-awesome-packages/foundation/zipball/a050cebee1032a492af619a85641534bc73eacc3",
-                "reference": "a050cebee1032a492af619a85641534bc73eacc3",
+                "url": "https://api.github.com/repos/my-awesome-packages/foundation/zipball/49a520a71e58622a0a7d85a4ef401872ce654891",
+                "reference": "49a520a71e58622a0a7d85a4ef401872ce654891",
                 "shasum": ""
             },
             "require": {
+                "illuminate/database": "^9.0",
                 "illuminate/support": "^9.0",
                 "php": "^8.1",
                 "ramsey/uuid": "^4.0"
@@ -1811,10 +1812,10 @@
             ],
             "description": "Awesome foundation",
             "support": {
-                "source": "https://github.com/my-awesome-packages/foundation/tree/1.1",
+                "source": "https://github.com/my-awesome-packages/foundation/tree/v1.0.2",
                 "issues": "https://github.com/my-awesome-packages/foundation/issues"
             },
-            "time": "2022-06-30T22:40:23+00:00"
+            "time": "2022-08-04T10:24:17+00:00"
         },
         {
             "name": "my-awesome-packages/rest",
