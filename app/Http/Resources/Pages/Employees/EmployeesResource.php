@@ -2,7 +2,7 @@
 
 namespace App\Http\Resources\Pages\Employees;
 
-use Awesome\Foundation\Traits\Resourceable;
+use Awesome\Foundation\Traits\Resources\Resourceable;
 use Illuminate\Http\Resources\Json\ResourceCollection;
 
 class EmployeesResource extends ResourceCollection
