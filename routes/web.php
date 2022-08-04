@@ -13,6 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::prefix('ajax')->group(function () {
+    Route::group(['prefix' => 'page', 'namespace' => 'Pages'], function () {
+        Route::group(['prefix' => 'employees', 'namespace' => 'Employees'], function() {
+            Route::get('/', [
+                'uses' => 'EmployeeController@data',
+                'as' => 'ajax.page.employees.data'
+            ]);
+        });
+    });
 });
