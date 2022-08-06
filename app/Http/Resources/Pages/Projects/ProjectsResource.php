@@ -20,7 +20,9 @@ class ProjectsResource extends ResourceCollection
                     'title' => $this->string($project['title']),
                     'comment' => $this->string($project['comment']),
                     'group_id' => $this->string($project['group_id']),
+                    'ended_at' => $this->string($project['ended_at']),
                     'status_id' => $this->string($project['status_id']),
+                    'started_at' => $this->string($project['started_at']),
                     'average_rate' => $this->int($project['average_rate']),
                     'customer_id' => $this->string($project['customer_id']),
                     'expected_profitability' => $this->int($project['expected_profitability'])
