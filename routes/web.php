@@ -18,25 +18,25 @@ Route::prefix('ajax')->group(function () {
         Route::group(['prefix' => 'employees', 'namespace' => 'Employees'], function() {
             Route::get('/', [
                 'uses' => 'EmployeeController@data',
-                'as' => 'ajax.page.employees.data'
+                'as' => 'ajax.page.employees'
             ]);
         });
 
         Route::group(['prefix' => 'vacations', 'namespace' => 'Vacations'], function () {
             Route::get('/', [
                 'uses' => 'VacationController@data',
-                'as' => 'ajax.page.vacations.data'
+                'as' => 'ajax.page.vacations'
             ]);
         });
 
         Route::group(['prefix' => 'projects', 'namespace' => 'Projects'], function () {
             Route::get('/', [
                 'uses' => 'ProjectController@data',
-                'as' => 'ajax.page.projects.data'
+                'as' => 'ajax.page.projects'
             ]);
 
             Route::get('/gantt', [
-                'uses' => 'ProjectController@gantt',
+                'uses' => 'GanttController@data',
                 'as' => 'ajax.page.projects.gantt'
             ]);
         });

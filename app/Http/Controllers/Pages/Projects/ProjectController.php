@@ -2,36 +2,24 @@
 
 namespace App\Http\Controllers\Pages\Projects;
 
-use App\Http\Controllers\Controller;
-use Awesome\Foundation\Traits\Requests\Decoding;
-use App\Http\Resources\Pages\Projects\GanttResource;
 use App\Http\Resources\Pages\Projects\ProjectsResource;
-use AwesomeManager\ProjectService\Client\Facades\ProjectClient;
 
-class ProjectController extends Controller
+class ProjectController extends AbstractProjectController
 {
-    use Decoding;
-
     public function data()
     {
-        $response = $this->findProjects();
+        $projects = $this->findProjects();
 
-        $this->abortIf(empty($response));
+        $this->abortIf(empty($projects));
 
-        return response()->jsonResponse(new ProjectsResource($response));
-    }
+        $statuses = $this->findStatuses(array_unique(array_column($projects, 'status_id')));
 
-    public function gantt()
-    {
-        $response = $this->findProjects();
+        $groups = $this->findGroups(array_unique(array_column($projects, 'group_id')));
 
-        $this->abortIf(empty($response));
+        $customers = $this->findCustomers(array_unique(array_column($projects, 'customer_id')));
 
-        return response()->jsonResponse(new GanttResource($response));
-    }
-
-    private function findProjects()
-    {
-        return $this->decode(ProjectClient::projects()->send(), null, []);
+        return response()->jsonResponse(new ProjectsResource(
+            collect(compact('projects', 'statuses', 'groups', 'customers'))
+        ));
     }
 }

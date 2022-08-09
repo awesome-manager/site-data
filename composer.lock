@@ -8,19 +8,20 @@
     "packages": [
         {
             "name": "awesome-manager-packages/project-service-package",
-            "version": "v1.0.0",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "git@github.com:awesome-manager-packages/project-service-package.git",
-                "reference": "72b76c48c62487611861ec680e9a5220623ba805"
+                "reference": "6803c855fe9f9302d7415cf5a47f8588d21a3e66"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/awesome-manager-packages/project-service-package/zipball/72b76c48c62487611861ec680e9a5220623ba805",
-                "reference": "72b76c48c62487611861ec680e9a5220623ba805",
+                "url": "https://api.github.com/repos/awesome-manager-packages/project-service-package/zipball/6803c855fe9f9302d7415cf5a47f8588d21a3e66",
+                "reference": "6803c855fe9f9302d7415cf5a47f8588d21a3e66",
                 "shasum": ""
             },
             "require": {
+                "illuminate/support": "^9.0",
                 "my-awesome-packages/connector": "^1.0"
             },
             "type": "library",
@@ -42,10 +43,10 @@
             ],
             "description": "Manager project service package",
             "support": {
-                "source": "https://github.com/awesome-manager-packages/project-service-package/tree/v1.0.0",
+                "source": "https://github.com/awesome-manager-packages/project-service-package/tree/v1.0.1",
                 "issues": "https://github.com/awesome-manager-packages/project-service-package/issues"
             },
-            "time": "2022-08-04T11:56:43+00:00"
+            "time": "2022-08-08T14:30:53+00:00"
         },
         {
             "name": "awesome-manager-packages/team-service-package",
