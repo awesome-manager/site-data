@@ -39,6 +39,11 @@ Route::prefix('ajax')->group(function () {
                 'uses' => 'GanttController@data',
                 'as' => 'ajax.page.projects.gantt'
             ]);
+
+            Route::get('/add', [
+                'uses' => 'AddProjectController@data',
+                'as' => 'ajax.page.projects.gantt'
+            ]);
         });
     });
 });
