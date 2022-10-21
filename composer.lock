@@ -1823,16 +1823,16 @@
         },
         {
             "name": "my-awesome-packages/foundation",
-            "version": "v1.0.4",
+            "version": "v1.0.5",
             "source": {
                 "type": "git",
                 "url": "git@github.com:my-awesome-packages/foundation.git",
-                "reference": "7770b5c042faef4e4ca4471ddb4674cc179c058a"
+                "reference": "0bbf1d3d25d97ca2779f3ff6d99d39cec7831647"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/my-awesome-packages/foundation/zipball/7770b5c042faef4e4ca4471ddb4674cc179c058a",
-                "reference": "7770b5c042faef4e4ca4471ddb4674cc179c058a",
+                "url": "https://api.github.com/repos/my-awesome-packages/foundation/zipball/0bbf1d3d25d97ca2779f3ff6d99d39cec7831647",
+                "reference": "0bbf1d3d25d97ca2779f3ff6d99d39cec7831647",
                 "shasum": ""
             },
             "require": {
@@ -1854,10 +1854,10 @@
             ],
             "description": "Awesome foundation",
             "support": {
-                "source": "https://github.com/my-awesome-packages/foundation/tree/v1.0.4",
+                "source": "https://github.com/my-awesome-packages/foundation/tree/v1.0.5",
                 "issues": "https://github.com/my-awesome-packages/foundation/issues"
             },
-            "time": "2022-08-04T12:24:04+00:00"
+            "time": "2022-10-21T12:18:40+00:00"
         },
         {
             "name": "my-awesome-packages/rest",
