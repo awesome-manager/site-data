@@ -42,7 +42,12 @@ Route::prefix('ajax')->group(function () {
 
             Route::get('/add', [
                 'uses' => 'AddProjectController@data',
-                'as' => 'ajax.page.projects.gantt'
+                'as' => 'ajax.page.projects.add_data'
+            ]);
+
+            Route::post('/add', [
+                'uses' => 'AddProjectController@create',
+                'as' => 'ajax.page.projects.create'
             ]);
         });
     });

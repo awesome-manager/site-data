@@ -3,15 +3,18 @@
 namespace App\Http\Controllers\Pages\Projects;
 
 use Illuminate\Support\Arr;
+use Illuminate\Http\Response;
+use App\Traits\Response\Responding;
 use App\Http\Controllers\Controller;
 use Awesome\Foundation\Traits\Arrays\Arrayable;
 use Awesome\Foundation\Traits\Requests\Decoding;
+use App\Http\Requests\Pages\Projects\CreateRequest;
 use App\Http\Resources\Pages\Projects\AddProjectResource;
 use AwesomeManager\ProjectService\Client\Facades\ProjectClient;
 
 class AddProjectController extends Controller
 {
-    use Arrayable, Decoding;
+    use Arrayable, Decoding, Responding;
 
     public function data()
     {
@@ -48,6 +51,11 @@ class AddProjectController extends Controller
         ));
     }
 
+    public function create(CreateRequest $request)
+    {
+        return $this->passUnchanged($this->createProject($request->validated()));
+    }
+
     private function findStatuses(array $ids = []): array
     {
         return $this->decode(ProjectClient::statuses(['ids' => $ids])->send(), 'statuses', []);
@@ -61,6 +69,11 @@ class AddProjectController extends Controller
     private function findCustomers(array $ids = [], $withAvailable = false): array
     {
         return $this->decode(ProjectClient::customers(['ids' => $ids], $withAvailable)->send(), 'customers', []);
+    }
+
+    private function createProject(array $data): Response
+    {
+        return ProjectClient::createProject($data)->send();
     }
 
     private function checkAvailable(array $groupCustomers, array $customers, array $groups): array

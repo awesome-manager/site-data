@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "awesome-manager-packages/project-service-package",
-            "version": "v1.0.1",
+            "version": "v1.0.2",
             "source": {
                 "type": "git",
                 "url": "git@github.com:awesome-manager-packages/project-service-package.git",
-                "reference": "6803c855fe9f9302d7415cf5a47f8588d21a3e66"
+                "reference": "89c0ab7df15c3fcf3068cf4ce6ba50a9b6df9301"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/awesome-manager-packages/project-service-package/zipball/6803c855fe9f9302d7415cf5a47f8588d21a3e66",
-                "reference": "6803c855fe9f9302d7415cf5a47f8588d21a3e66",
+                "url": "https://api.github.com/repos/awesome-manager-packages/project-service-package/zipball/89c0ab7df15c3fcf3068cf4ce6ba50a9b6df9301",
+                "reference": "89c0ab7df15c3fcf3068cf4ce6ba50a9b6df9301",
                 "shasum": ""
             },
             "require": {
@@ -43,10 +43,10 @@
             ],
             "description": "Manager project service package",
             "support": {
-                "source": "https://github.com/awesome-manager-packages/project-service-package/tree/v1.0.1",
+                "source": "https://github.com/awesome-manager-packages/project-service-package/tree/v1.0.2",
                 "issues": "https://github.com/awesome-manager-packages/project-service-package/issues"
             },
-            "time": "2022-08-08T14:30:53+00:00"
+            "time": "2022-10-23T15:34:35+00:00"
         },
         {
             "name": "awesome-manager-packages/team-service-package",
@@ -1861,22 +1861,23 @@
         },
         {
             "name": "my-awesome-packages/rest",
-            "version": "v1.0.1",
+            "version": "v1.0.4",
             "source": {
                 "type": "git",
                 "url": "git@github.com:my-awesome-packages/rest.git",
-                "reference": "1a9d36965d451e17b880b3e3b1f93b354f1395dd"
+                "reference": "7a32d24acbbcc23f39aaf1b6399693d4c13f66d2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/my-awesome-packages/rest/zipball/1a9d36965d451e17b880b3e3b1f93b354f1395dd",
-                "reference": "1a9d36965d451e17b880b3e3b1f93b354f1395dd",
+                "url": "https://api.github.com/repos/my-awesome-packages/rest/zipball/7a32d24acbbcc23f39aaf1b6399693d4c13f66d2",
+                "reference": "7a32d24acbbcc23f39aaf1b6399693d4c13f66d2",
                 "shasum": ""
             },
             "require": {
                 "illuminate/http": "^9.0",
                 "illuminate/support": "^9.0",
-                "illuminate/validation": "^9.0"
+                "illuminate/validation": "^9.0",
+                "my-awesome-packages/foundation": "^1.0"
             },
             "type": "library",
             "autoload": {
@@ -1897,10 +1898,10 @@
             ],
             "description": "Awesome rest",
             "support": {
-                "source": "https://github.com/my-awesome-packages/rest/tree/v1.0.1",
+                "source": "https://github.com/my-awesome-packages/rest/tree/v1.0.4",
                 "issues": "https://github.com/my-awesome-packages/rest/issues"
             },
-            "time": "2022-07-31T10:53:10+00:00"
+            "time": "2022-10-23T10:46:08+00:00"
         },
         {
             "name": "nesbot/carbon",
