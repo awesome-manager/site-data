@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Pages\Employees;
 
 use App\Http\Controllers\Controller;
-use Awesome\Foundation\Traits\Decoding;
+use Awesome\Foundation\Traits\Requests\Decoding;
 use App\Http\Resources\Pages\Employees\EmployeesResource;
 use AwesomeManager\TeamService\Client\Facades\TeamClient;
 

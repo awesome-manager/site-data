@@ -6,6 +6,7 @@
     "license": "MIT",
     "require": {
         "php": "^8.0.2",
+        "awesome-manager-packages/project-service-package": "^1.0",
         "awesome-manager-packages/team-service-package": "^1.0",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^9.11",
@@ -26,6 +27,14 @@
     "repositories": [
         {
             "type": "vcs",
+            "url": "git@github.com:awesome-manager-packages/project-service-package.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:awesome-manager-packages/team-service-package.git"
+        },
+        {
+            "type": "vcs",
             "url": "git@github.com:my-awesome-packages/connector.git"
         },
         {
@@ -35,10 +44,6 @@
         {
             "type": "vcs",
             "url": "git@github.com:my-awesome-packages/rest.git"
-        },
-        {
-            "type": "vcs",
-            "url": "git@github.com:awesome-manager-packages/team-service-package.git"
         }
     ],
     "autoload": {
