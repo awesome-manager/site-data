@@ -4,8 +4,49 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e4389ea94c99e3b031e4e2ff742cd026",
+    "content-hash": "dfff8a6e78d3c0eded54c8c972c88e30",
     "packages": [
+        {
+            "name": "awesome-manager-packages/idm-data-package",
+            "version": "v1.0.2",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:awesome-manager-packages/idm-data-package.git",
+                "reference": "a37eea2401a6a824bc470e4f51de0e31a965d4b2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/awesome-manager-packages/idm-data-package/zipball/a37eea2401a6a824bc470e4f51de0e31a965d4b2",
+                "reference": "a37eea2401a6a824bc470e4f51de0e31a965d4b2",
+                "shasum": ""
+            },
+            "require": {
+                "my-awesome-packages/connector": "^1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "AwesomeManager\\IdmData\\Client\\": [
+                        "src/"
+                    ]
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Vadim Lebedev",
+                    "email": "shadar147@gmail.com"
+                }
+            ],
+            "description": "Manager idm data package",
+            "support": {
+                "source": "https://github.com/awesome-manager-packages/idm-data-package/tree/v1.0.2",
+                "issues": "https://github.com/awesome-manager-packages/idm-data-package/issues"
+            },
+            "time": "2022-11-01T13:27:19+00:00"
+        },
         {
             "name": "awesome-manager-packages/project-service-package",
             "version": "v1.0.2",
@@ -1787,20 +1828,21 @@
         },
         {
             "name": "my-awesome-packages/connector",
-            "version": "v1.0.1",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "git@github.com:my-awesome-packages/connector.git",
-                "reference": "8a7c7f9efb4941a9a0a670437e7d581302d8c27a"
+                "reference": "956a7c8b6d7a7a2706f79579e938a73c272cfdde"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/my-awesome-packages/connector/zipball/8a7c7f9efb4941a9a0a670437e7d581302d8c27a",
-                "reference": "8a7c7f9efb4941a9a0a670437e7d581302d8c27a",
+                "url": "https://api.github.com/repos/my-awesome-packages/connector/zipball/956a7c8b6d7a7a2706f79579e938a73c272cfdde",
+                "reference": "956a7c8b6d7a7a2706f79579e938a73c272cfdde",
                 "shasum": ""
             },
             "require": {
                 "guzzlehttp/guzzle": "^7.2",
+                "my-awesome-packages/rest": "^1.0",
                 "php": "^8.1"
             },
             "type": "library",
@@ -1816,10 +1858,10 @@
             ],
             "description": "Awesome connector",
             "support": {
-                "source": "https://github.com/my-awesome-packages/connector/tree/v1.0.1",
+                "source": "https://github.com/my-awesome-packages/connector/tree/v1.1.0",
                 "issues": "https://github.com/my-awesome-packages/connector/issues"
             },
-            "time": "2022-07-26T05:33:27+00:00"
+            "time": "2022-11-01T13:29:57+00:00"
         },
         {
             "name": "my-awesome-packages/foundation",

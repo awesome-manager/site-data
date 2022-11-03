@@ -185,17 +185,17 @@ return [
         /*
          * Package Service Providers...
          */
-        Awesome\Rest\RestProvider::class,
         Awesome\Connector\ConnectorServiceProvider::class,
-        AwesomeManager\TeamService\Client\ClientServiceProvider::class,
+        Awesome\Rest\RestProvider::class,
+        AwesomeManager\IdmData\Client\ClientServiceProvider::class,
         AwesomeManager\ProjectService\Client\ClientServiceProvider::class,
+        AwesomeManager\TeamService\Client\ClientServiceProvider::class,
 
         /*
          * Application Service Providers...
          */
         App\Providers\AppServiceProvider::class,
         App\Providers\AuthServiceProvider::class,
-        // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 

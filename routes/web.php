@@ -14,6 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::prefix('ajax')->group(function () {
+    Route::group(['prefix' => 'idm', 'namespace' => 'Idm'], function () {
+        Route::group(['prefix' => 'auth', 'namespace' => 'Auth'], function ($router) {
+            $router->post('login', 'AuthController@login');
+        });
+    });
+
     Route::group(['prefix' => 'page', 'namespace' => 'Pages'], function () {
         Route::group(['prefix' => 'employees', 'namespace' => 'Employees'], function() {
             Route::get('/', [
