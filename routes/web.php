@@ -17,6 +17,10 @@ Route::prefix('ajax')->group(function () {
     Route::group(['prefix' => 'idm', 'namespace' => 'Idm'], function () {
         Route::group(['prefix' => 'auth', 'namespace' => 'Auth'], function ($router) {
             $router->post('login', 'AuthController@login');
+            $router->get('user', [
+//                'middleware' => 'auth:idm',
+                'uses' => 'AuthController@user'
+            ]);
         });
     });
 
