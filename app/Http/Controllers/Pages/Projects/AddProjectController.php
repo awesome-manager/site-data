@@ -16,6 +16,8 @@ class AddProjectController extends Controller
 {
     use Arrayable, Decoding, Responding;
 
+    public string $code = 'add_project';
+
     public function data()
     {
         $statuses = $this->findStatuses();

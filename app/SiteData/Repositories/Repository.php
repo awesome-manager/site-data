@@ -11,4 +11,9 @@ class Repository implements RepositoryContract
     {
         return app(Repositories\MenuItemRepository::class);
     }
+
+    public function SitePage(): Repositories\SitePageRepository
+    {
+        return app(Repositories\SitePageRepository::class);
+    }
 }

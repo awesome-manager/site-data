@@ -12,6 +12,8 @@ class ProjectController extends Controller
 {
     use Arrayable, Decoding;
 
+    public string $code = 'projects';
+
     public function data()
     {
         $projects = $this->findProjects();

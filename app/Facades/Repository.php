@@ -8,6 +8,7 @@ use App\SiteData\Contracts\Repositories\Repository as RepositoryContract;
 
 /**
  * @method static Repositories\MenuItemRepository menuItem()
+ * @method static Repositories\SitePageRepository sitePage()
  */
 class Repository extends Facade
 {

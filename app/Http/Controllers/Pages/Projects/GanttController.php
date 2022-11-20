@@ -12,6 +12,8 @@ class GanttController extends Controller
 {
     use Arrayable, Decoding;
 
+    public string $code = 'gantt';
+
     public function data()
     {
         $projects = $this->findProjects();

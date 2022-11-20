@@ -23,6 +23,10 @@ class SiteDataServiceProvider extends ServiceProvider implements DeferrableProvi
         $this->app->bind(Contracts\Repositories\MenuItemRepository::class, function () {
             return new Repositories\MenuItemRepository(new Models\MenuItem());
         });
+
+        $this->app->bind(Contracts\Repositories\SitePageRepository::class, function () {
+            return new Repositories\SitePageRepository(new Models\SitePage());
+        });
     }
 
     private function registerServices(): void
@@ -37,6 +41,7 @@ class SiteDataServiceProvider extends ServiceProvider implements DeferrableProvi
     {
         return [
             Contracts\Repositories\MenuItemRepository::class,
+            Contracts\Repositories\SitePageRepository::class,
         ];
     }
 }

@@ -11,6 +11,8 @@ class EmployeeController extends Controller
 {
     use Decoding;
 
+    public string $code = 'employeess';
+
     public function data()
     {
         $response = $this->decode(TeamClient::employees()->send(), 'employees', []);

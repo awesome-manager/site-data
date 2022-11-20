@@ -11,6 +11,8 @@ class VacationController extends Controller
 {
     use Decoding;
 
+    public string $code = 'vacations';
+
     public function data()
     {
         $response = $this->decode(TeamClient::vacations()->send(), null, []);
