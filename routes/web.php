@@ -18,6 +18,7 @@ Route::prefix('ajax')->group(function () {
         Route::group(['prefix' => 'auth', 'namespace' => 'Auth'], function ($router) {
             $router->post('login', 'AuthController@login');
             $router->get('user', [
+                'middleware' => 'auth:idm',
                 'uses' => 'AuthController@user'
             ]);
         });
@@ -32,7 +33,7 @@ Route::prefix('ajax')->group(function () {
         });
     });
 
-    Route::group(['prefix' => 'page', 'namespace' => 'Pages', 'middleware' => 'page.available'], function () {
+    Route::group(['prefix' => 'page', 'namespace' => 'Pages', 'middleware' => ['auth:idm', 'page.available']], function () {
         Route::group(['prefix' => 'employees', 'namespace' => 'Employees'], function() {
             Route::get('/', [
                 'uses' => 'EmployeeController@data',

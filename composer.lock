@@ -8,7 +8,7 @@
     "packages": [
         {
             "name": "awesome-manager-packages/idm-data-package",
-            "version": "v1.0.2",
+            "version": "v1.1.1",
             "source": {
                 "type": "git",
                 "url": "git@github.com:awesome-manager-packages/idm-data-package.git",

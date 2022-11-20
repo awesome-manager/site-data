@@ -2,7 +2,7 @@
 
 namespace App\Providers;
 
-use App\SiteData\{Contracts as Contracts, Repositories};
+use App\SiteData\{Contracts, Repositories};
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider

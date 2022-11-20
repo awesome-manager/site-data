@@ -11,7 +11,7 @@ class EmployeeController extends Controller
 {
     use Decoding;
 
-    public string $code = 'employeess';
+    public string $code = 'employees';
 
     public function data()
     {

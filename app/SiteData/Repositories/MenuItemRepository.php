@@ -18,4 +18,18 @@ class MenuItemRepository extends AbstractRepository implements RepositoryContrac
             ->orderByDesc('sort')
             ->get();
     }
+
+    public function findBySitePageIds(array $ids): Collection
+    {
+        if (empty($ids)) {
+            return $this->getCollection();
+        }
+
+        return $this->getModel()->newQuery()
+            ->select('id', 'title', 'site_page_id', 'icon')
+            ->where('is_active', true)
+            ->whereIn('site_page_id', $ids)
+            ->orderByDesc('sort')
+            ->get();
+    }
 }
