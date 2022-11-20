@@ -24,6 +24,15 @@ Route::prefix('ajax')->group(function () {
         });
     });
 
+    Route::group(['prefix' => 'site', 'namespace' => 'Site'], function () {
+        Route::group(['prefix' => 'menu', 'namespace' => 'Menu'], function() {
+            Route::get('/', [
+                'uses' => 'MenuController@data',
+                'as' => 'ajax.site.menu'
+            ]);
+        });
+    });
+
     Route::group(['prefix' => 'page', 'namespace' => 'Pages'], function () {
         Route::group(['prefix' => 'employees', 'namespace' => 'Employees'], function() {
             Route::get('/', [

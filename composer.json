@@ -11,7 +11,6 @@
         "awesome-manager-packages/team-service-package": "^1.0",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^9.11",
-        "laravel/sanctum": "^2.14.1",
         "laravel/tinker": "^2.7",
         "my-awesome-packages/connector": "^1.0",
         "my-awesome-packages/foundation": "^1.0",
