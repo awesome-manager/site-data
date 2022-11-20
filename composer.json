@@ -6,7 +6,7 @@
     "license": "MIT",
     "require": {
         "php": "^8.0.2",
-        "awesome-manager-packages/idm-data-package": "^1.0",
+        "awesome-manager-packages/idm-data-package": "^1.1",
         "awesome-manager-packages/project-service-package": "^1.0",
         "awesome-manager-packages/team-service-package": "^1.0",
         "guzzlehttp/guzzle": "^7.2",

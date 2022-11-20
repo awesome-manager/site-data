@@ -4,24 +4,29 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b8fc302065939e5d6859ffe898a886da",
+    "content-hash": "1a01527c33025f0aca79a5e346145097",
     "packages": [
         {
             "name": "awesome-manager-packages/idm-data-package",
-            "version": "v1.1.1",
+            "version": "v1.1.2",
             "source": {
                 "type": "git",
                 "url": "git@github.com:awesome-manager-packages/idm-data-package.git",
-                "reference": "a37eea2401a6a824bc470e4f51de0e31a965d4b2"
+                "reference": "98ace2389b0821969d1a778bb7348fd818294c76"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/awesome-manager-packages/idm-data-package/zipball/a37eea2401a6a824bc470e4f51de0e31a965d4b2",
-                "reference": "a37eea2401a6a824bc470e4f51de0e31a965d4b2",
+                "url": "https://api.github.com/repos/awesome-manager-packages/idm-data-package/zipball/98ace2389b0821969d1a778bb7348fd818294c76",
+                "reference": "98ace2389b0821969d1a778bb7348fd818294c76",
                 "shasum": ""
             },
             "require": {
-                "my-awesome-packages/connector": "^1.0"
+                "illuminate/auth": "^9.0",
+                "illuminate/database": "^9.0",
+                "illuminate/http": "^9.0",
+                "illuminate/support": "^9.0",
+                "my-awesome-packages/connector": "^1.0",
+                "my-awesome-packages/foundation": "^1.0"
             },
             "type": "library",
             "autoload": {
@@ -42,10 +47,10 @@
             ],
             "description": "Manager idm data package",
             "support": {
-                "source": "https://github.com/awesome-manager-packages/idm-data-package/tree/v1.0.2",
+                "source": "https://github.com/awesome-manager-packages/idm-data-package/tree/v1.1.2",
                 "issues": "https://github.com/awesome-manager-packages/idm-data-package/issues"
             },
-            "time": "2022-11-01T13:27:19+00:00"
+            "time": "2022-11-20T20:25:57+00:00"
         },
         {
             "name": "awesome-manager-packages/project-service-package",
