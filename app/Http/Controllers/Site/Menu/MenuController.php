@@ -29,7 +29,7 @@ class MenuController extends Controller
         return response()->jsonResponse(
             (new MenuResource(collect([
                 'menu' => $menu,
-                'pages' => $pages ?? $menu->pluck('site_pages')
+                'pages' => $pages ?? $menu->pluck('sitePage')
             ])))->toArray()
         );
     }
