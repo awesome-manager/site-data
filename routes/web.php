@@ -16,11 +16,17 @@ use Illuminate\Support\Facades\Route;
 Route::prefix('ajax')->group(function () {
     Route::group(['prefix' => 'idm', 'namespace' => 'Idm'], function () {
         Route::group(['prefix' => 'auth', 'namespace' => 'Auth'], function ($router) {
-            $router->post('login', 'AuthController@login');
-            $router->get('user', [
-                'middleware' => 'auth:idm',
-                'uses' => 'AuthController@user'
-            ]);
+            Route::post('login', 'AuthController@login');
+
+            Route::group(['middleware' => 'auth:idm'], function () {
+                Route::get('user', [
+                    'uses' => 'AuthController@user'
+                ]);
+
+                Route::delete('logout', [
+                    'uses' => 'AuthController@logout'
+                ]);
+            });
         });
     });
 
