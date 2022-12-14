@@ -3,8 +3,7 @@
 namespace App\Http\Controllers\Idm\Auth;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Idm\Auth\LoginRequest;
-use App\Http\Requests\Idm\Auth\RefreshTokenRequest;
+use App\Http\Requests\Idm\Auth\{LoginRequest, RefreshTokenRequest};
 use App\Traits\Response\Responding;
 use Awesome\Connector\Contracts\Status;
 use AwesomeManager\IdmData\Client\Facades\IdmClient;
