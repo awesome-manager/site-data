@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "awesome-manager-packages/idm-data-package",
-            "version": "v1.1.4",
+            "version": "v1.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/awesome-manager-packages/idm-data-package.git",
-                "reference": "634a30883b2ed6bd426c0972bb338cb8addfb2a5"
+                "reference": "096d970c2f5cdb9575649b49d13dd06484f31b55"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/awesome-manager-packages/idm-data-package/zipball/634a30883b2ed6bd426c0972bb338cb8addfb2a5",
-                "reference": "634a30883b2ed6bd426c0972bb338cb8addfb2a5",
+                "url": "https://api.github.com/repos/awesome-manager-packages/idm-data-package/zipball/096d970c2f5cdb9575649b49d13dd06484f31b55",
+                "reference": "096d970c2f5cdb9575649b49d13dd06484f31b55",
                 "shasum": ""
             },
             "require": {
@@ -47,10 +47,10 @@
             ],
             "description": "Manager idm data package",
             "support": {
-                "source": "https://github.com/awesome-manager-packages/idm-data-package/tree/v1.1.4",
+                "source": "https://github.com/awesome-manager-packages/idm-data-package/tree/v1.1.5",
                 "issues": "https://github.com/awesome-manager-packages/idm-data-package/issues"
             },
-            "time": "2022-12-14T11:31:52+00:00"
+            "time": "2022-12-14T15:28:50+00:00"
         },
         {
             "name": "awesome-manager-packages/project-service-package",

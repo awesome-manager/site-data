@@ -15,8 +15,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::prefix('ajax')->group(function () {
     Route::group(['prefix' => 'idm', 'namespace' => 'Idm'], function () {
-        Route::group(['prefix' => 'auth', 'namespace' => 'Auth'], function ($router) {
+        Route::group(['prefix' => 'auth', 'namespace' => 'Auth'], function () {
             Route::post('login', 'AuthController@login');
+            Route::post('refresh', 'AuthController@refresh');
 
             Route::group(['middleware' => 'auth:idm'], function () {
                 Route::get('user', [
