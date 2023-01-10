@@ -55,6 +55,22 @@ Route::prefix('ajax')->group(function () {
             ]);
         });
 
+        Route::group(['prefix' => 'profile', 'namespace' => 'Profile'], function () {
+            Route::post('/update', [
+                'uses' => 'UserController@updateUserInfo'
+            ]);
+
+            Route::group(['prefix' => 'image'], function () {
+                Route::post('/', [
+                    'uses' => 'UserImageController@createUserImage'
+                ]);
+
+                Route::delete('/', [
+                    'uses' => 'UserImageController@deleteUserImage'
+                ]);
+            });
+        });
+
         Route::group(['prefix' => 'projects', 'namespace' => 'Projects'], function () {
             Route::get('/', [
                 'uses' => 'ProjectController@data',

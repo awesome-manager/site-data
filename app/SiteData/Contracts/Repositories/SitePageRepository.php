@@ -8,5 +8,5 @@ interface SitePageRepository
 {
     public function getByCode(string $code): ?Model;
 
-    public function findByCodes(array $code): Collection;
+    public function findByCodes(array $codes): Collection;
 }
