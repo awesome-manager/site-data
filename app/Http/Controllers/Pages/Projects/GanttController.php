@@ -7,16 +7,26 @@ use Awesome\Foundation\Traits\Arrays\Arrayable;
 use Awesome\Foundation\Traits\Requests\Decoding;
 use App\Http\Resources\Pages\Projects\GanttResource;
 use AwesomeManager\ProjectService\Client\Facades\ProjectClient;
+use Illuminate\Support\Facades\Auth;
 
 class GanttController extends Controller
 {
     use Arrayable, Decoding;
 
     protected string $code = 'gantt';
+    protected array $filterEntities = ['project'];
 
     public function data()
     {
-        $projects = $this->findProjects();
+        if (!empty($this->filters['project'])) {
+            $availableProjects = $this->filters['project'];
+        } else {
+            $this->abortIf(!Auth::user()->isAdmin());
+
+            $availableProjects = [];
+        }
+
+        $projects = $this->findProjects($availableProjects, !Auth::user()->isAdmin());
 
         $this->abortIf(empty($projects));
 
@@ -27,9 +37,9 @@ class GanttController extends Controller
         ));
     }
 
-    private function findProjects()
+    private function findProjects(array $ids = [], bool $activeOnly = true)
     {
-        return $this->decode(ProjectClient::projects()->send(), 'projects', []);
+        return $this->decode(ProjectClient::projects($ids, $activeOnly)->send(), 'projects', []);
     }
 
     private function findGroups(array $ids = [])
