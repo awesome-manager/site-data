@@ -9,7 +9,7 @@ use App\Http\Controllers\Controller;
 use Awesome\Foundation\Traits\Arrays\Arrayable;
 use Awesome\Foundation\Traits\Requests\Decoding;
 use App\Http\Requests\Pages\Projects\CreateRequest;
-use App\Http\Resources\Pages\Projects\AddProjectResource;
+use App\Http\Resources\Pages\Projects\{AddProjectResource, CreateProjectResource};
 use AwesomeManager\ProjectService\Client\Facades\ProjectClient;
 
 class AddProjectController extends Controller
@@ -55,7 +55,10 @@ class AddProjectController extends Controller
 
     public function create(CreateRequest $request)
     {
-        return $this->passUnchanged($this->createProject($request->validated()));
+        return $this->passError(
+            $this->createProject($request->validated()),
+            CreateProjectResource::class
+        );
     }
 
     private function findStatuses(array $ids = []): array

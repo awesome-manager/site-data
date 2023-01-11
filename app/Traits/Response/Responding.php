@@ -2,14 +2,27 @@
 
 namespace App\Traits\Response;
 
-use Illuminate\Http\Response;
+use Illuminate\Http\{JsonResponse, Request, Response};
 
 trait Responding
 {
-     public function passUnchanged(Response $response, $default = ['success' => false])
+     public function passError(
+         Response $response,
+         string $resourceClass,
+         ?Request $request = null,
+         $default = ['success' => false]
+     ): JsonResponse|Response
      {
          $data = json_decode($response->getContent(), true);
 
-         return empty($data['content']) ? response()->jsonResponse($default) : response($data);
+         if (empty($data['content'])) {
+             return response()->jsonResponse($default);
+         }
+
+         if ($data['error'] !== 0) {
+             return response($data);
+         }
+
+         return response()->jsonResponse((new $resourceClass($data['content']))->toArray($request));
      }
 }

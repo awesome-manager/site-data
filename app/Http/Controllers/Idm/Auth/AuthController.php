@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Idm\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Idm\Auth\{LoginRequest, RefreshTokenRequest};
+use App\Http\Resources\Idm\{LoginResource, LogoutResource, RefreshTokenResource, UserResource};
 use App\Traits\Response\Responding;
 use Awesome\Connector\Contracts\Status;
 use AwesomeManager\IdmData\Client\Facades\IdmClient;
@@ -20,17 +21,24 @@ class AuthController extends Controller
             $request->input('password')
         )->send();
 
+        if (!empty($decode = $response->decode()) && !empty($decode['access_token'])) {
+            return response()->jsonResponse((new LoginResource($decode))->toArray());
+        }
+
         return response()->jsonResponse($response->decode());
     }
 
     public function logout()
     {
-        return $this->passUnchanged(IdmClient::logout()->send());
+        return $this->passError(
+            IdmClient::logout()->send(),
+            LogoutResource::class
+        );
     }
 
     public function user()
     {
-        return response()->jsonResponse(Auth::user());
+        return response()->jsonResponse((new UserResource(Auth::user()))->toArray());
     }
 
     public function refresh(RefreshTokenRequest $request)
@@ -38,7 +46,7 @@ class AuthController extends Controller
         $response = IdmClient::refreshAccessToken($request->get('refresh_token'));
 
         if (!empty($decode = $response->decode()) && !empty($decode['access_token'])) {
-            return response()->jsonResponse($decode);
+            return response()->jsonResponse((new RefreshTokenResource($decode))->toArray());
         }
 
         return response('Unauthorized.', Status::UNAUTHORIZED);
