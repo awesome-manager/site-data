@@ -14,7 +14,7 @@ class UserImageController extends Controller
 {
     use Decoding, Responding;
 
-    public string $code = 'profile';
+    protected string $code = 'profile';
 
     public function createUserImage(CreateUserImageRequest $request)
     {

@@ -13,5 +13,6 @@ class Kernel extends HttpKernel
     protected $routeMiddleware = [
         'auth' => \App\Http\Middleware\Authenticate::class,
         'page.available' => \App\Http\Middleware\PageAvailableMiddleware::class,
+        'page.filter' => \App\Http\Middleware\PageFilterMiddleware::class,
     ];
 }

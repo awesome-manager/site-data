@@ -12,7 +12,7 @@ class GanttController extends Controller
 {
     use Arrayable, Decoding;
 
-    public string $code = 'gantt';
+    protected string $code = 'gantt';
 
     public function data()
     {

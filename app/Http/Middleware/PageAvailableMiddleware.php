@@ -11,7 +11,7 @@ class PageAvailableMiddleware
 {
     public function handle(Request $request, Closure $next): mixed
     {
-        abort_if(!$this->isPageAvailable($request->route()->controller->code ?? ''), 404);
+        abort_if(!$this->isPageAvailable($request->route()->controller->getCode() ?? ''), 404);
 
         return $next($request);
     }
@@ -19,6 +19,6 @@ class PageAvailableMiddleware
     private function isPageAvailable(string $code): bool
     {
         return !is_null(Repository::sitePage()->getByCode($code)) && !is_null(Auth::user()) &&
-            in_array($code, Auth::user()->getAccessPages());
+            Auth::user()->checkAccessPage($code);
     }
 }

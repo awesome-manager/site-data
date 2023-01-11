@@ -16,7 +16,7 @@ class AddProjectController extends Controller
 {
     use Arrayable, Decoding, Responding;
 
-    public string $code = 'add_project';
+    protected string $code = 'add_project';
 
     public function data()
     {
