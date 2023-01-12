@@ -40,7 +40,7 @@ Route::prefix('ajax')->group(function () {
         });
     });
 
-    Route::group(['prefix' => 'page', 'namespace' => 'Pages', 'middleware' => ['auth:idm', 'page.available']], function () {
+    Route::group(['prefix' => 'page', 'namespace' => 'Pages', 'middleware' => ['auth:idm', 'page.available', 'page.filter']], function () {
         Route::group(['prefix' => 'employees', 'namespace' => 'Employees'], function() {
             Route::get('/', [
                 'uses' => 'EmployeeController@data',

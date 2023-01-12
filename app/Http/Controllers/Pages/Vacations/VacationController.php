@@ -11,7 +11,7 @@ class VacationController extends Controller
 {
     use Decoding;
 
-    public string $code = 'vacations';
+    protected string $code = 'vacations';
 
     public function data()
     {

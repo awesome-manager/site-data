@@ -13,7 +13,7 @@ class UserController extends Controller
 {
     use Responding;
 
-    public string $code = 'profile';
+    protected string $code = 'profile';
 
     public function updateUserInfo(UpdateUserInfoRequest $request)
     {
