@@ -15,12 +15,19 @@ use Illuminate\Support\Facades\Route;
 
 Route::prefix('ajax')->group(function () {
     Route::group(['prefix' => 'idm', 'namespace' => 'Idm'], function () {
-        Route::group(['prefix' => 'auth', 'namespace' => 'Auth'], function ($router) {
-            $router->post('login', 'AuthController@login');
-            $router->get('user', [
-                'middleware' => 'auth:idm',
-                'uses' => 'AuthController@user'
-            ]);
+        Route::group(['prefix' => 'auth', 'namespace' => 'Auth'], function () {
+            Route::post('login', 'AuthController@login');
+            Route::post('refresh', 'AuthController@refresh');
+
+            Route::group(['middleware' => 'auth:idm'], function () {
+                Route::get('user', [
+                    'uses' => 'AuthController@user'
+                ]);
+
+                Route::delete('logout', [
+                    'uses' => 'AuthController@logout'
+                ]);
+            });
         });
     });
 
@@ -33,7 +40,7 @@ Route::prefix('ajax')->group(function () {
         });
     });
 
-    Route::group(['prefix' => 'page', 'namespace' => 'Pages', 'middleware' => ['auth:idm', 'page.available']], function () {
+    Route::group(['prefix' => 'page', 'namespace' => 'Pages', 'middleware' => ['auth:idm', 'page.available', 'page.filter']], function () {
         Route::group(['prefix' => 'employees', 'namespace' => 'Employees'], function() {
             Route::get('/', [
                 'uses' => 'EmployeeController@data',
@@ -46,6 +53,22 @@ Route::prefix('ajax')->group(function () {
                 'uses' => 'VacationController@data',
                 'as' => 'ajax.page.vacations'
             ]);
+        });
+
+        Route::group(['prefix' => 'profile', 'namespace' => 'Profile'], function () {
+            Route::post('/update', [
+                'uses' => 'UserController@updateUserInfo'
+            ]);
+
+            Route::group(['prefix' => 'image'], function () {
+                Route::post('/', [
+                    'uses' => 'UserImageController@createUserImage'
+                ]);
+
+                Route::delete('/', [
+                    'uses' => 'UserImageController@deleteUserImage'
+                ]);
+            });
         });
 
         Route::group(['prefix' => 'projects', 'namespace' => 'Projects'], function () {

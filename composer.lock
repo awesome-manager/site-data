@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "awesome-manager-packages/idm-data-package",
-            "version": "v1.1.3",
+            "version": "v1.1.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/awesome-manager-packages/idm-data-package.git",
-                "reference": "1206b1cc0335783bfdc32ae23652b095ed8b74e9"
+                "reference": "d11ccbc4eeb40b128f40b930aa68c1e907028c95"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/awesome-manager-packages/idm-data-package/zipball/1206b1cc0335783bfdc32ae23652b095ed8b74e9",
-                "reference": "1206b1cc0335783bfdc32ae23652b095ed8b74e9",
+                "url": "https://api.github.com/repos/awesome-manager-packages/idm-data-package/zipball/d11ccbc4eeb40b128f40b930aa68c1e907028c95",
+                "reference": "d11ccbc4eeb40b128f40b930aa68c1e907028c95",
                 "shasum": ""
             },
             "require": {
@@ -47,23 +47,23 @@
             ],
             "description": "Manager idm data package",
             "support": {
-                "source": "https://github.com/awesome-manager-packages/idm-data-package/tree/v1.1.3",
+                "source": "https://github.com/awesome-manager-packages/idm-data-package/tree/v1.1.7",
                 "issues": "https://github.com/awesome-manager-packages/idm-data-package/issues"
             },
-            "time": "2022-12-13T10:35:19+00:00"
+            "time": "2023-01-12T08:53:09+00:00"
         },
         {
             "name": "awesome-manager-packages/project-service-package",
-            "version": "v1.0.2",
+            "version": "v1.0.4",
             "source": {
                 "type": "git",
-                "url": "git@github.com:awesome-manager-packages/project-service-package.git",
-                "reference": "89c0ab7df15c3fcf3068cf4ce6ba50a9b6df9301"
+                "url": "https://github.com/awesome-manager-packages/project-service-package.git",
+                "reference": "7029e0c22dca75d62710b3398fc33dc48a150451"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/awesome-manager-packages/project-service-package/zipball/89c0ab7df15c3fcf3068cf4ce6ba50a9b6df9301",
-                "reference": "89c0ab7df15c3fcf3068cf4ce6ba50a9b6df9301",
+                "url": "https://api.github.com/repos/awesome-manager-packages/project-service-package/zipball/7029e0c22dca75d62710b3398fc33dc48a150451",
+                "reference": "7029e0c22dca75d62710b3398fc33dc48a150451",
                 "shasum": ""
             },
             "require": {
@@ -89,23 +89,23 @@
             ],
             "description": "Manager project service package",
             "support": {
-                "source": "https://github.com/awesome-manager-packages/project-service-package/tree/v1.0.2",
+                "source": "https://github.com/awesome-manager-packages/project-service-package/tree/v1.0.4",
                 "issues": "https://github.com/awesome-manager-packages/project-service-package/issues"
             },
-            "time": "2022-10-23T15:34:35+00:00"
+            "time": "2023-01-12T08:55:24+00:00"
         },
         {
             "name": "awesome-manager-packages/team-service-package",
-            "version": "v1.0.2",
+            "version": "v1.0.3",
             "source": {
                 "type": "git",
-                "url": "git@github.com:awesome-manager-packages/team-service-package.git",
-                "reference": "d8198982feb7854e82161c6b87df0b986ad2e49e"
+                "url": "https://github.com/awesome-manager-packages/team-service-package.git",
+                "reference": "ed10392697216337deba86ac6abc62a0a6577e61"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/awesome-manager-packages/team-service-package/zipball/d8198982feb7854e82161c6b87df0b986ad2e49e",
-                "reference": "d8198982feb7854e82161c6b87df0b986ad2e49e",
+                "url": "https://api.github.com/repos/awesome-manager-packages/team-service-package/zipball/ed10392697216337deba86ac6abc62a0a6577e61",
+                "reference": "ed10392697216337deba86ac6abc62a0a6577e61",
                 "shasum": ""
             },
             "require": {
@@ -130,10 +130,10 @@
             ],
             "description": "Manager team service package",
             "support": {
-                "source": "https://github.com/awesome-manager-packages/team-service-package/tree/v1.0.2",
+                "source": "https://github.com/awesome-manager-packages/team-service-package/tree/v1.0.3",
                 "issues": "https://github.com/awesome-manager-packages/team-service-package/issues"
             },
-            "time": "2022-07-31T16:06:06+00:00"
+            "time": "2023-01-12T08:56:46+00:00"
         },
         {
             "name": "brick/math",
@@ -1768,16 +1768,16 @@
         },
         {
             "name": "my-awesome-packages/connector",
-            "version": "v1.1.0",
+            "version": "v1.1.1",
             "source": {
                 "type": "git",
-                "url": "git@github.com:my-awesome-packages/connector.git",
-                "reference": "956a7c8b6d7a7a2706f79579e938a73c272cfdde"
+                "url": "https://github.com/my-awesome-packages/connector.git",
+                "reference": "5bc72c3126d3b40edf5f6d55faf031d189454145"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/my-awesome-packages/connector/zipball/956a7c8b6d7a7a2706f79579e938a73c272cfdde",
-                "reference": "956a7c8b6d7a7a2706f79579e938a73c272cfdde",
+                "url": "https://api.github.com/repos/my-awesome-packages/connector/zipball/5bc72c3126d3b40edf5f6d55faf031d189454145",
+                "reference": "5bc72c3126d3b40edf5f6d55faf031d189454145",
                 "shasum": ""
             },
             "require": {
@@ -1798,29 +1798,30 @@
             ],
             "description": "Awesome connector",
             "support": {
-                "source": "https://github.com/my-awesome-packages/connector/tree/v1.1.0",
+                "source": "https://github.com/my-awesome-packages/connector/tree/v1.1.1",
                 "issues": "https://github.com/my-awesome-packages/connector/issues"
             },
-            "time": "2022-11-01T13:29:57+00:00"
+            "time": "2023-01-11T10:29:54+00:00"
         },
         {
             "name": "my-awesome-packages/foundation",
-            "version": "v1.2.0",
+            "version": "v1.2.2",
             "source": {
                 "type": "git",
-                "url": "git@github.com:my-awesome-packages/foundation.git",
-                "reference": "7bc43206046c44992beefa65445d588db476fa53"
+                "url": "https://github.com/my-awesome-packages/foundation.git",
+                "reference": "b69e67915aebb9108057e0072a18ce515b845079"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/my-awesome-packages/foundation/zipball/7bc43206046c44992beefa65445d588db476fa53",
-                "reference": "7bc43206046c44992beefa65445d588db476fa53",
+                "url": "https://api.github.com/repos/my-awesome-packages/foundation/zipball/b69e67915aebb9108057e0072a18ce515b845079",
+                "reference": "b69e67915aebb9108057e0072a18ce515b845079",
                 "shasum": ""
             },
             "require": {
                 "illuminate/database": "^9.0",
                 "illuminate/support": "^9.0",
                 "illuminate/testing": "^9.0",
+                "nesbot/carbon": "^2.53.1",
                 "php": "^8.1",
                 "ramsey/uuid": "^4.0"
             },
@@ -1837,10 +1838,10 @@
             ],
             "description": "Awesome foundation",
             "support": {
-                "source": "https://github.com/my-awesome-packages/foundation/tree/v1.2.0",
+                "source": "https://github.com/my-awesome-packages/foundation/tree/v1.2.2",
                 "issues": "https://github.com/my-awesome-packages/foundation/issues"
             },
-            "time": "2022-11-20T11:03:02+00:00"
+            "time": "2023-01-11T10:24:40+00:00"
         },
         {
             "name": "my-awesome-packages/rest",

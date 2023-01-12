@@ -4,21 +4,33 @@ namespace App\Http\Controllers\Pages\Employees;
 
 use App\Http\Controllers\Controller;
 use Awesome\Foundation\Traits\Requests\Decoding;
+use Awesome\Foundation\Traits\Arrays\Arrayable;
 use App\Http\Resources\Pages\Employees\EmployeesResource;
 use AwesomeManager\TeamService\Client\Facades\TeamClient;
+use Illuminate\Support\Facades\Auth;
 
 class EmployeeController extends Controller
 {
-    use Decoding;
+    use Arrayable, Decoding;
 
-    public string $code = 'employees';
+    protected string $code = 'employees';
 
     public function data()
     {
-        $response = $this->decode(TeamClient::employees()->send(), 'employees', []);
+        $employees = $this->decode(TeamClient::employees(!Auth::user()->isAdmin())->send(), 'employees', []);
 
-        $this->abortIf(empty($response));
+        $this->abortIf(empty($employees));
 
-        return response()->jsonResponse((new EmployeesResource($response)));
+        $grades = $this->decode(
+            TeamClient::grades($this->pluckUniqueColumn($employees, 'grade_id'))->send(), 'grades', []
+        );
+
+        $positions = $this->decode(
+            TeamClient::positions(
+                $this->pluckUniqueColumn($employees, 'position_id')
+            )->send(), 'positions', []
+        );
+
+        return response()->jsonResponse((new EmployeesResource(compact('employees', 'grades', 'positions'))));
     }
 }

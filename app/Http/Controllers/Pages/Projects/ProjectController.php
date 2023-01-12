@@ -3,20 +3,24 @@
 namespace App\Http\Controllers\Pages\Projects;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\Pages\Projects\ProjectsResource;
 use Awesome\Foundation\Traits\Arrays\Arrayable;
 use Awesome\Foundation\Traits\Requests\Decoding;
-use App\Http\Resources\Pages\Projects\ProjectsResource;
 use AwesomeManager\ProjectService\Client\Facades\ProjectClient;
+use Illuminate\Support\Facades\Auth;
 
 class ProjectController extends Controller
 {
     use Arrayable, Decoding;
 
-    public string $code = 'projects';
+    protected string $code = 'projects';
+    protected array $filterEntities = ['project'];
 
     public function data()
     {
-        $projects = $this->findProjects();
+        [$availableProjects] = $this->getAvailableEntities('project');
+
+        $projects = $this->findProjects($availableProjects, !Auth::user()->isAdmin());
 
         $this->abortIf(empty($projects));
 
@@ -31,9 +35,9 @@ class ProjectController extends Controller
         ));
     }
 
-    private function findProjects()
+    private function findProjects(array $ids = [], bool $activeOnly = true)
     {
-        return $this->decode(ProjectClient::projects()->send(), 'projects', []);
+        return $this->decode(ProjectClient::projects($ids, $activeOnly)->send(), 'projects', []);
     }
 
     private function findStatuses(array $ids = [])
