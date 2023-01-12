@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Routing\Controller as BaseController;
+use Illuminate\Support\Facades\Auth;
 
 class Controller extends BaseController
 {
@@ -28,5 +29,22 @@ class Controller extends BaseController
     protected function abortIf(bool $boolean, int $code = 404, string $message = '', array $headers = [])
     {
         abort_if($boolean, $code, $message, $headers);
+    }
+
+    protected function getAvailableEntities(string ...$entity): array
+    {
+        $result = [];
+
+        foreach ($entity as $item) {
+            if (!empty($this->filters[$item])) {
+                $result[] = $this->filters[$item];
+            } else {
+                $this->abortIf(!Auth::user()->isAdmin());
+
+                $result[] = [];
+            }
+        }
+
+        return $result;
     }
 }

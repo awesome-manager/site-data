@@ -18,13 +18,7 @@ class ProjectController extends Controller
 
     public function data()
     {
-        if (!empty($this->filters['project'])) {
-            $availableProjects = $this->filters['project'];
-        } else {
-            $this->abortIf(!Auth::user()->isAdmin());
-
-            $availableProjects = [];
-        }
+        [$availableProjects] = $this->getAvailableEntities('project');
 
         $projects = $this->findProjects($availableProjects, !Auth::user()->isAdmin());
 
