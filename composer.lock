@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "awesome-manager-packages/idm-data-package",
-            "version": "v1.1.6",
+            "version": "v1.1.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/awesome-manager-packages/idm-data-package.git",
-                "reference": "50eaa3f7ef46586f2864f2f4eda533b4c2e63517"
+                "reference": "d11ccbc4eeb40b128f40b930aa68c1e907028c95"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/awesome-manager-packages/idm-data-package/zipball/50eaa3f7ef46586f2864f2f4eda533b4c2e63517",
-                "reference": "50eaa3f7ef46586f2864f2f4eda533b4c2e63517",
+                "url": "https://api.github.com/repos/awesome-manager-packages/idm-data-package/zipball/d11ccbc4eeb40b128f40b930aa68c1e907028c95",
+                "reference": "d11ccbc4eeb40b128f40b930aa68c1e907028c95",
                 "shasum": ""
             },
             "require": {
@@ -47,23 +47,23 @@
             ],
             "description": "Manager idm data package",
             "support": {
-                "source": "https://github.com/awesome-manager-packages/idm-data-package/tree/v1.1.6",
+                "source": "https://github.com/awesome-manager-packages/idm-data-package/tree/v1.1.7",
                 "issues": "https://github.com/awesome-manager-packages/idm-data-package/issues"
             },
-            "time": "2023-01-11T10:28:04+00:00"
+            "time": "2023-01-12T08:53:09+00:00"
         },
         {
             "name": "awesome-manager-packages/project-service-package",
-            "version": "v1.0.3",
+            "version": "v1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/awesome-manager-packages/project-service-package.git",
-                "reference": "f78b23724979d392ebbc21c04c364321219b05b0"
+                "reference": "7029e0c22dca75d62710b3398fc33dc48a150451"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/awesome-manager-packages/project-service-package/zipball/f78b23724979d392ebbc21c04c364321219b05b0",
-                "reference": "f78b23724979d392ebbc21c04c364321219b05b0",
+                "url": "https://api.github.com/repos/awesome-manager-packages/project-service-package/zipball/7029e0c22dca75d62710b3398fc33dc48a150451",
+                "reference": "7029e0c22dca75d62710b3398fc33dc48a150451",
                 "shasum": ""
             },
             "require": {
@@ -89,23 +89,23 @@
             ],
             "description": "Manager project service package",
             "support": {
-                "source": "https://github.com/awesome-manager-packages/project-service-package/tree/v1.0.3",
+                "source": "https://github.com/awesome-manager-packages/project-service-package/tree/v1.0.4",
                 "issues": "https://github.com/awesome-manager-packages/project-service-package/issues"
             },
-            "time": "2023-01-11T10:26:27+00:00"
+            "time": "2023-01-12T08:55:24+00:00"
         },
         {
             "name": "awesome-manager-packages/team-service-package",
-            "version": "v1.0.2",
+            "version": "v1.0.3",
             "source": {
                 "type": "git",
-                "url": "git@github.com:awesome-manager-packages/team-service-package.git",
-                "reference": "d8198982feb7854e82161c6b87df0b986ad2e49e"
+                "url": "https://github.com/awesome-manager-packages/team-service-package.git",
+                "reference": "ed10392697216337deba86ac6abc62a0a6577e61"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/awesome-manager-packages/team-service-package/zipball/d8198982feb7854e82161c6b87df0b986ad2e49e",
-                "reference": "d8198982feb7854e82161c6b87df0b986ad2e49e",
+                "url": "https://api.github.com/repos/awesome-manager-packages/team-service-package/zipball/ed10392697216337deba86ac6abc62a0a6577e61",
+                "reference": "ed10392697216337deba86ac6abc62a0a6577e61",
                 "shasum": ""
             },
             "require": {
@@ -130,10 +130,10 @@
             ],
             "description": "Manager team service package",
             "support": {
-                "source": "https://github.com/awesome-manager-packages/team-service-package/tree/v1.0.2",
+                "source": "https://github.com/awesome-manager-packages/team-service-package/tree/v1.0.3",
                 "issues": "https://github.com/awesome-manager-packages/team-service-package/issues"
             },
-            "time": "2022-07-31T16:06:06+00:00"
+            "time": "2023-01-12T08:56:46+00:00"
         },
         {
             "name": "brick/math",
